@@ -1,6 +1,5 @@
 import { createApi } from "unsplash-js";
-import mockSearchResponse from "./mockSearchResponse.json";
-import { ImageObject } from "../types";
+// import mockSearchResponse from "./mockSearchResponse.json";
 
 const unsplash = createApi({
   accessKey: "aWDL2Iib3zEbY8ntvdXz7ALXKVXzx9aLsx5bv2CZUD0",
@@ -18,7 +17,9 @@ async function getImagesByQuery(query: string, page: number) {
     return resp.response;
   }
 
+  // uncomment below and comment out lines 10-19 to use mock api
   // return mockSearchResponse;
+
   console.error("There is an issue with retrieving photos from Unsplash API");
 }
 
