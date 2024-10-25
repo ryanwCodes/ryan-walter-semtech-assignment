@@ -11,6 +11,10 @@ function App() {
     searchImages(query);
   }
 
+  function handleLoadMore() {
+    loadMoreImages();
+  }
+
   return (
     <div className="app-root">
       <SearchBar onSearch={onSearch} />
@@ -18,7 +22,7 @@ function App() {
         hasNextPage={true}
         isNextPageLoading={isLoading}
         images={data}
-        loadNextPage={loadMoreImages}
+        loadMore={handleLoadMore}
         searchQuery={searchQuery}
       />
     </div>
