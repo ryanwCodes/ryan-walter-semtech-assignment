@@ -2,7 +2,6 @@ import "./App.css";
 import ImageGrid from "./components/ImageGrid/ImageGrid";
 import SearchBar from "./components/SearchBar/SearchBar";
 import useImageSearch from "./hooks/useImageSearch";
-import "react-virtualized/styles.css";
 
 function App() {
   const { data, searchImages, loadMoreImages, isLoading, searchQuery } =
