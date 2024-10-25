@@ -2,7 +2,6 @@ import "./App.css";
 import ImageGrid from "./components/ImageGrid/ImageGrid";
 import SearchBar from "./components/SearchBar/SearchBar";
 import useImageSearch from "./hooks/useImageSearch";
-import "react-virtualized/styles.css";
 
 function App() {
   const { data, searchImages, loadMoreImages, isLoading, searchQuery } =
@@ -12,6 +11,10 @@ function App() {
     searchImages(query);
   }
 
+  function handleLoadMore() {
+    loadMoreImages();
+  }
+
   return (
     <div className="app-root">
       <SearchBar onSearch={onSearch} />
@@ -19,7 +22,7 @@ function App() {
         hasNextPage={true}
         isNextPageLoading={isLoading}
         images={data}
-        loadNextPage={loadMoreImages}
+        loadMore={handleLoadMore}
         searchQuery={searchQuery}
       />
     </div>

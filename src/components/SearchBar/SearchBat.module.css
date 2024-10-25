@@ -1,18 +1,18 @@
 .container {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 1rem;
 
   background-color: white;
   border-bottom: black 1px solid;
-  padding: 12px 0px;
-  margin-bottom: 12px;
+  padding: 1rem 0;
+  margin-bottom: 1rem;
 }
 
 .input {
-  width: 250px;
+  width: 33%;
 }
 
 .button {
-  padding: 6px 12px;
+  padding: 0.5rem 1rem;
 }
