@@ -2,7 +2,7 @@ import { createApi } from "unsplash-js";
 // import mockSearchResponse from "./mockSearchResponse.json";
 
 const unsplash = createApi({
-  accessKey: "aWDL2Iib3zEbY8ntvdXz7ALXKVXzx9aLsx5bv2CZUD0",
+  accessKey: process.env.UNSPLASH_API_KEY as string,
 });
 
 async function getImagesByQuery(query: string, page: number) {
